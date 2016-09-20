@@ -1,0 +1,101 @@
+*kitondro.txt*
+
+                      __   _ __                  __
+                     / /__(_) /_____  ____  ____/ /________
+                    / //_/ / __/ __ \/ __ \/ __  / ___/ __ \
+                   / ,< / / /_/ /_/ / / / / /_/ / /  / /_/ /
+                  /_/|_/_/\__/\____/_/ /_/\__,_/_/   \____/
+
+
+Contact: Osman Koçak <kocakosm@gmail.com>                   *kitondro-credits*
+Version: 0.1
+
+
+==============================================================================
+CONTENTS                                                   *kitondro-contents*
+
+  1. Introduction .................................... |kitondro-introduction|
+  2. Requirements .................................... |kitondro-requirements|
+  3. Usage ........................................... |kitondro-usage|
+    3.1 Commands ..................................... |kitondro-commands|
+    3.2 Functions .................................... |kitondro-functions|
+  4. License ......................................... |kitondro-license|
+
+
+==============================================================================
+1. Introduction                                        *kitondro-introduction*
+
+Kitondro is a Vim plugin that lets the user control the cursor's visibility.
+
+The name of the plugin comes from the word "kitondro", which means "cursor" in
+Malagasy (https://en.wikipedia.org/wiki/Malagasy_language).
+
+
+==============================================================================
+2. Requirements                                        *kitondro-requirements*
+
+Kitondro requires a GUI (terminal Vim is NOT supported). Though it should just
+work in all GUI flavors of Vim, it has only been tested with the GTK+ variants
+(versions 2 and 3).
+
+
+==============================================================================
+3. Usage                                                      *kitondro-usage*
+
+Kitondro provides several commands and functions detailed hereafter.
+
+------------------------------------------------------------------------------
+3.1 Commands                                               *kitondro-commands*
+
+:HideCursor                                                      *:HideCursor*
+  Hides the cursor. Has no effect if the cursor is already hidden.
+  Note that this command calls |kitondro#hide_cursor()| internally.
+
+:ShowCursor                                                      *:ShowCursor*
+  Shows the cursor. Has no effect if the cursor is already visible.
+  Note that this command calls |kitondro#show_cursor()| internally.
+
+:ToggleCursor                                                  *:ToggleCursor*
+  Toggles the cursor's visibility, that is, hides it if it is visible, and,
+  shows it if it is hidden.
+  Note that this command calls |kitondro#toggle_cursor()| internally.
+
+------------------------------------------------------------------------------
+3.2 Functions                                             *kitondro-functions*
+
+kitondro#hide_cursor()                                *kitondro#hide_cursor()*
+  Hides the cursor. Has no effect if the cursor is already hidden.
+
+kitondro#show_cursor()                                *kitondro#show_cursor()*
+  Shows the cursor. Has no effect if the cursor is already visible.
+
+kitondro#toggle_cursor()                            *kitondro#toggle_cursor()*
+  Toggles the cursor's visibility, that is, hides it if it is visible, and,
+  shows it if it is hidden.
+
+
+==============================================================================
+4. License                                                  *kitondro-license*
+
+Copyright (c) 2016 Osman Koçak <kocakosm@gmail.com>
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+
+
+==============================================================================
