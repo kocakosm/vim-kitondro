@@ -17,7 +17,6 @@ Usage
 `:help kitondro` or read it [online][2].
 
 TL;DR
-
 * `:HideCursor` or `call kitondro#hide_cursor()` hides the cursor
 * `:ShowCursor` or `call kitondro#show_cursor()` shows the cursor
 * `:ToggleCursor` or `call kitondro#toggle_cursor()` toggles the cursor's visibility
@@ -26,37 +25,17 @@ TL;DR
 FAQ
 ---
 
-> **Q**: Is this plugin really useful?<br/>
-> **A**: Ahem... I would say 'No', but I actually happen to use it...
+**Q**: Is this plugin really useful?<br/>
+**A**: Ahem... I would say 'No', but I actually happen to use it...
 
-> **Q**: Why is this plugin named 'Kitondro'?<br/>
-> **A**: Kitondro means 'cursor' in [Malagasy][3].
+**Q**: Why is this plugin named 'Kitondro'?<br/>
+**A**: Kitondro means 'cursor' in [Malagasy][3].
 
 
 License
 -------
 
-Copyright (c) 2016 Osman Koçak
-
-Permission is hereby granted, free of charge, to any person obtaining a copy of
-this software and associated documentation files (the "Software"), to deal in
-the Software without restriction, including without limitation the rights to
-use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of
-the Software, and to permit persons to whom the Software is furnished to do so,
-subject to the following conditions:
-
-The above copyright notice and this permission notice shall be included in all
-copies or substantial portions of the Software.
-
-_The software is provided "as is", without warranty of any kind, express or
-implied, including but not limited to the warranties of merchantability,
-fitness for a particular purpose and noninfringement. In no event shall the
-authors or copyright holders be liable for any claim, damages or other
-liability, whether in an action of contract, tort or otherwise, arising from,
-out of or in connection with the software or the use or other dealings in the
-software._
-
-See the [MIT License][4] for more details.
+Copyright (c) 2016 Osman Koçak. Distributed under the terms of the [MIT License][4].
 
 
 Contact
