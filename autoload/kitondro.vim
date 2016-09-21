@@ -7,11 +7,13 @@
 let s:cursor_bg = 'NONE'
 let s:cursor_fg = 'NONE'
 let s:cursor_gui = 'NONE'
+let s:gui_properties = ['bold', 'italic', 'reverse', 'inverse']
+let s:gui_properties += ['standout', 'underline', 'undercurl']
 
 function! s:get_cursor_highlight(key) abort
   if a:key == 'gui'
     let gui = []
-    for k in ['bold', 'italic', 'reverse', 'inverse', 'standout', 'underline', 'undercurl']
+    for k in s:gui_properties
       if s:get_cursor_highlight(k) != 'NONE'
         let gui += [k]
       endif
@@ -60,7 +62,7 @@ function! s:run_if_has_gui(f) abort
   if has('gui_running')
     call a:f()
   else
-    call s:warn('vim-kitondro does not support terminal Vim')
+    call s:warn('vim-kitondro does not support console versions of Vim')
   endif
 endfunction
 
