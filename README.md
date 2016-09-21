@@ -7,7 +7,7 @@ Kitondro is a Vim plugin that lets the user control the cursor's visibility.
 Installation
 ------------
 
-If you don't have a preferred installation method, I'd recommend [vim-plug][1].
+If you don't have a preferred installation method, I'd recommend [vim-plug][1].<br/>
 See the project's home page for installation and usage instructions.
 
 
@@ -17,6 +17,7 @@ Usage
 `:help kitondro` or read it [online][2].
 
 TL;DR
+
 * `:HideCursor` or `call kitondro#hide_cursor()` hides the cursor
 * `:ShowCursor` or `call kitondro#show_cursor()` shows the cursor
 * `:ToggleCursor` or `call kitondro#toggle_cursor()` toggles the cursor's visibility
