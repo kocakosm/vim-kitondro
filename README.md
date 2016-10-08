@@ -1,36 +1,38 @@
 Vim-kitondro
 ============
 
-Kitondro is a Vim plugin that lets the user control the cursor's visibility.
+Kitondro is a Vim plugin that enables to control the cursor's visibility.
 
 
 Installation
 ------------
 
-If you don't have a preferred installation method, I'd recommend [vim-plug][1].<br/>
-See the project's home page for installation and usage instructions.
+If you don't already have a preferred installation method, I would recommend
+using [vim-plug][1]. See the project's home page for installation and usage
+instructions.
 
 
 Usage
 -----
 
-`:help kitondro` or read it [online][2].
+RTFM: `:help kitondro` (or you can also read it [online][2]).
 
-TL;DR
+TL;DR:
 
-* `:HideCursor` or `call kitondro#hide_cursor()` hides the cursor
-* `:ShowCursor` or `call kitondro#show_cursor()` shows the cursor
-* `:ToggleCursor` or `call kitondro#toggle_cursor()` toggles the cursor's visibility
+* `:HideCursor` or `kitondro#hide_cursor()` hides the cursor
+* `:ShowCursor` or `kitondro#show_cursor()` shows the cursor
+* `:ToggleCursor` or `kitondro#toggle_cursor()` toggles the cursor's visibility
+* `kitondro#is_cursor_visible()` returns whether the cursor is currently visible
 
 
 FAQ
 ---
 
 **Q**: Is this plugin really useful?<br/>
-**A**: Ahem... I would say 'No', but I actually happen to use it...
+**A**: Ahem...
 
-**Q**: Why is this plugin named 'Kitondro'?<br/>
-**A**: Kitondro means 'cursor' in [Malagasy][3].
+**Q**: Why 'Kitondro'?<br/>
+**A**: It means 'cursor' in [Malagasy][3].
 
 
 License

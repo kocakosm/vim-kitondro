@@ -60,14 +60,18 @@ endfunction
 
 function! s:run_if_has_gui(f) abort
   if has('gui_running')
-    call a:f()
+    return a:f()
   else
-    call s:warn('vim-kitondro does not support console versions of Vim')
+    call s:warn('vim-kitondro only supports GUI versions of Vim')
   endif
 endfunction
 
 function! s:warn(msg) abort
   echohl WarningMsg | echomsg a:msg | echohl None
+endfunction
+
+function! kitondro#is_cursor_visible() abort
+  return s:run_if_has_gui(function('s:is_cursor_visible'))
 endfunction
 
 function! kitondro#hide_cursor() abort

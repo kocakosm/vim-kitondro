@@ -8,7 +8,7 @@
 
 
 Contact: Osman Koçak <kocakosm@gmail.com>                   *kitondro-credits*
-Version: 0.2
+Version: 0.3
 
 
 ==============================================================================
@@ -25,7 +25,7 @@ CONTENTS                                                   *kitondro-contents*
 ==============================================================================
 1. Introduction                                        *kitondro-introduction*
 
-Kitondro is a Vim plugin that lets the user control the cursor's visibility.
+Kitondro is a Vim plugin that enables to control the cursor's visibility.
 
 The name of this plugin comes from the word "kitondro", which means "cursor"
 in Malagasy (https://en.wikipedia.org/wiki/Malagasy_language).
@@ -49,19 +49,20 @@ Kitondro provides several commands and functions detailed hereafter.
 
 :HideCursor                                                      *:HideCursor*
   Hides the cursor. Has no effect if the cursor is already hidden.
-  Note that this command calls |kitondro#hide_cursor()| internally.
 
 :ShowCursor                                                      *:ShowCursor*
   Shows the cursor. Has no effect if the cursor is already visible.
-  Note that this command calls |kitondro#show_cursor()| internally.
 
 :ToggleCursor                                                  *:ToggleCursor*
   Toggles the cursor's visibility, that is, hides it if it is visible, and,
   shows it if it is hidden.
-  Note that this command calls |kitondro#toggle_cursor()| internally.
 
 ------------------------------------------------------------------------------
 3.2 Functions                                             *kitondro-functions*
+
+kitondro#is_cursor_visible()                    *kitondro#is_cursor_visible()*
+  Returns whether the cursor is currently visible (more precisely, returns 1
+  if it is visible and 0 otherwise).
 
 kitondro#hide_cursor()                                *kitondro#hide_cursor()*
   Hides the cursor. Has no effect if the cursor is already hidden.
