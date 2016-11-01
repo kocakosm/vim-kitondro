@@ -18,7 +18,7 @@ function! s:get_cursor_highlight(key) abort
         let gui += [k]
       endif
     endfor
-    return len(gui) == 0 ? 'NONE' : join(gui, ',')
+    return empty(gui) ? 'NONE' : join(gui, ',')
   endif
   let arg = synIDattr(synIDtrans(hlID('Cursor')), a:key)
   return (arg == -1 || arg == '') ? 'NONE' : arg
@@ -32,21 +32,33 @@ function! s:is_cursor_visible() abort
   let bg = s:get_cursor_highlight('bg')
   let fg = s:get_cursor_highlight('fg')
   let gui = s:get_cursor_highlight('gui')
-  return !(bg == 'NONE' && fg == 'NONE' && gui == 'NONE')
+  return [bg, fg, gui] != ['NONE', 'NONE', 'NONE']
+endfunction
+
+function! s:save_cursor_highlight() abort
+  let s:cursor_bg = s:get_cursor_highlight('bg')
+  let s:cursor_fg = s:get_cursor_highlight('fg')
+  let s:cursor_gui = s:get_cursor_highlight('gui')
 endfunction
 
 function! s:hide_cursor() abort
   if s:is_cursor_visible()
-    let s:cursor_bg = s:get_cursor_highlight('bg')
-    let s:cursor_fg = s:get_cursor_highlight('fg')
-    let s:cursor_gui = s:get_cursor_highlight('gui')
+    call s:save_cursor_highlight()
     call s:set_cursor_highlight('NONE', 'NONE', 'NONE')
   endif
 endfunction
 
 function! s:show_cursor() abort
   if !s:is_cursor_visible()
-    call s:set_cursor_highlight(s:cursor_bg, s:cursor_fg, s:cursor_gui)
+    if [s:cursor_bg, s:cursor_fg, s:cursor_gui] == ['NONE', 'NONE', 'NONE']
+      if exists('g:colors_name')
+        execute 'colorscheme ' . g:colors_name
+      else
+        call s:warn('Can''t figure out cursor''s highlight attributes')
+      endif
+    else
+      call s:set_cursor_highlight(s:cursor_bg, s:cursor_fg, s:cursor_gui)
+    endif
   endif
 endfunction
 
@@ -62,7 +74,7 @@ function! s:run_if_has_gui(f) abort
   if has('gui_running')
     return a:f()
   else
-    call s:warn('vim-kitondro only supports GUI versions of Vim')
+    call s:warn('Kitondro only supports GUI versions of Vim')
   endif
 endfunction
 
@@ -85,3 +97,8 @@ endfunction
 function! kitondro#toggle_cursor() abort
   call s:run_if_has_gui(function('s:toggle_cursor'))
 endfunction
+
+augroup __kitondro__
+  autocmd!
+  autocmd colorscheme * call <sid>save_cursor_highlight()
+augroup END
