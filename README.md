@@ -15,7 +15,7 @@ instructions.
 Usage
 -----
 
-RTFM: `:help kitondro` (or you can also read it [online][2]).
+[RTFM][2]...
 
 TL;DR:
 
