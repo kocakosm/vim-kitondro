@@ -1,7 +1,6 @@
 :HideCursor	kitondro.txt	/*:HideCursor*
 :ShowCursor	kitondro.txt	/*:ShowCursor*
 :ToggleCursor	kitondro.txt	/*:ToggleCursor*
-kitondro	kitondro.txt	/*kitondro.txt*
 kitondro#hide_cursor()	kitondro.txt	/*kitondro#hide_cursor()*
 kitondro#is_cursor_visible()	kitondro.txt	/*kitondro#is_cursor_visible()*
 kitondro#show_cursor()	kitondro.txt	/*kitondro#show_cursor()*
@@ -14,3 +13,4 @@ kitondro-introduction	kitondro.txt	/*kitondro-introduction*
 kitondro-license	kitondro.txt	/*kitondro-license*
 kitondro-requirements	kitondro.txt	/*kitondro-requirements*
 kitondro-usage	kitondro.txt	/*kitondro-usage*
+kitondro.txt	kitondro.txt	/*kitondro.txt*
