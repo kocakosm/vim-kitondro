@@ -26,9 +26,9 @@ Usage
 
 TL;DR:
 
-* `:HideCursor` or `kitondro#hide_cursor()` hides the cursor
-* `:ShowCursor` or `kitondro#show_cursor()` shows the cursor
-* `:ToggleCursor` or `kitondro#toggle_cursor()` toggles the cursor's visibility
+* `:KitondroHideCursor` or `kitondro#hide_cursor()` hides the cursor
+* `:KitondroShowCursor` or `kitondro#show_cursor()` shows the cursor
+* `:KitondroToggleCursor` or `kitondro#toggle_cursor()` toggles the cursor's visibility
 * `kitondro#is_cursor_visible()` returns whether the cursor is currently visible
 
 
