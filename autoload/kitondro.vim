@@ -11,10 +11,10 @@ let s:gui_properties = ['bold', 'italic', 'reverse', 'inverse']
 let s:gui_properties += ['standout', 'underline', 'undercurl']
 
 function! s:get_cursor_highlight(key) abort
-  if a:key == 'gui'
+  if a:key ==? 'gui'
     let gui = []
     for k in s:gui_properties
-      if s:get_cursor_highlight(k) != 'NONE'
+      if s:get_cursor_highlight(k) !=? 'NONE'
         let gui += [k]
       endif
     endfor
@@ -32,7 +32,7 @@ function! s:is_cursor_visible() abort
   let bg = s:get_cursor_highlight('bg')
   let fg = s:get_cursor_highlight('fg')
   let gui = s:get_cursor_highlight('gui')
-  return [bg, fg, gui] != ['NONE', 'NONE', 'NONE']
+  return [bg, fg, gui] !=? ['NONE', 'NONE', 'NONE']
 endfunction
 
 function! s:save_cursor_highlight() abort
@@ -50,7 +50,7 @@ endfunction
 
 function! s:show_cursor() abort
   if !s:is_cursor_visible()
-    if [s:cursor_bg, s:cursor_fg, s:cursor_gui] == ['NONE', 'NONE', 'NONE']
+    if [s:cursor_bg, s:cursor_fg, s:cursor_gui] ==? ['NONE', 'NONE', 'NONE']
       if exists('g:colors_name')
         execute 'colorscheme ' . g:colors_name
       else
