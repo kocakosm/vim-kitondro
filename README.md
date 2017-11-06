@@ -4,6 +4,13 @@ Vim-kitondro
 Kitondro is a Vim plugin that enables to control the cursor's visibility.
 
 
+Requirements
+------------
+
+Kitondro requires a GUI version of Vim. Though it should just work in all GUI
+flavors of Vim, it has only been tested with the GTK+ variants.
+
+
 Installation
 ------------
 
