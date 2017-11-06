@@ -8,7 +8,7 @@
 
 
 Contact: Osman Koçak <kocakosm@gmail.com>                   *kitondro-credits*
-Version: 0.4
+Version: 0.5
 
 
 ==============================================================================
