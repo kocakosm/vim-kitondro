@@ -47,13 +47,13 @@ Kitondro provides several commands and functions detailed hereafter.
 ------------------------------------------------------------------------------
 3.1 Commands                                               *kitondro-commands*
 
-:HideCursor                                                      *:HideCursor*
+:KitondroHideCursor                                      *:KitondroHideCursor*
   Hides the cursor. Has no effect if the cursor is already hidden.
 
-:ShowCursor                                                      *:ShowCursor*
+:KitondroShowCursor                                      *:KitondroShowCursor*
   Shows the cursor. Has no effect if the cursor is already visible.
 
-:ToggleCursor                                                  *:ToggleCursor*
+:KitondroToggleCursor                                  *:KitondroToggleCursor*
   Toggles the cursor's visibility, that is, hides it if it is visible, and,
   shows it if it is hidden.
 

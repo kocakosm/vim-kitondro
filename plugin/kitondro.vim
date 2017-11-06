@@ -12,11 +12,9 @@ let g:loaded_kitondro = 1
 let s:save_cpo = &cpo
 set cpo&vim
 
-if !exists(':HideCursor') && !exists(':ShowCursor') && !exists(':ToggleCursor')
-  command! HideCursor call kitondro#hide_cursor()
-  command! ShowCursor call kitondro#show_cursor()
-  command! ToggleCursor call kitondro#toggle_cursor()
-endif
+command! KitondroHideCursor call kitondro#hide_cursor()
+command! KitondroShowCursor call kitondro#show_cursor()
+command! KitondroToggleCursor call kitondro#toggle_cursor()
 
 function! s:create_menu_entry(name, target) abort
   execute 'nnoremenu <script> <silent> '
