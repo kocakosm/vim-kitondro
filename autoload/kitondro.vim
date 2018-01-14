@@ -64,9 +64,9 @@ endfunction
 
 function! s:toggle_cursor() abort
   if s:is_cursor_visible()
-    call kitondro#hide_cursor()
+    call s:hide_cursor()
   else
-    call kitondro#show_cursor()
+    call s:show_cursor()
   endif
 endfunction
 
@@ -74,12 +74,12 @@ function! s:run_if_has_gui(f) abort
   if has('gui_running')
     return a:f()
   else
-    call s:warn('Kitondro only supports GUI versions of Vim')
+    call s:warn('Only GUI versions of Vim are supported')
   endif
 endfunction
 
 function! s:warn(msg) abort
-  echohl WarningMsg | echomsg a:msg | echohl None
+  echohl WarningMsg | echomsg '[kitondro] ' . a:msg | echohl None
 endfunction
 
 function! kitondro#is_cursor_visible() abort
@@ -98,7 +98,9 @@ function! kitondro#toggle_cursor() abort
   call s:run_if_has_gui(function('s:toggle_cursor'))
 endfunction
 
-augroup __kitondro__
-  autocmd!
-  autocmd colorscheme * call <sid>save_cursor_highlight()
-augroup END
+if has('autocmd') && exists('##ColorScheme')
+  augroup __kitondro__
+    autocmd!
+    autocmd ColorScheme * call <sid>save_cursor_highlight()
+  augroup END
+endif
