@@ -1,6 +1,6 @@
 "----------------------------------------------------------------------"
 " This file is part of vim-kitondro                                    "
-" Copyright (c) 2016-2017 Osman Koçak <kocakosm@gmail.com>             "
+" Copyright (c) 2016-2018 Osman Koçak <kocakosm@gmail.com>             "
 " Licensed under the MIT license <https://opensource.org/licenses/MIT> "
 "----------------------------------------------------------------------"
 
