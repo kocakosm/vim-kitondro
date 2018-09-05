@@ -15,7 +15,7 @@ function! s:get_cursor_highlight(key) abort
     let gui = []
     for k in s:gui_properties
       if s:get_cursor_highlight(k) !=? 'NONE'
-        let gui += [k]
+        call add(gui, k)
       endif
     endfor
     return empty(gui) ? 'NONE' : join(gui, ',')
@@ -25,7 +25,7 @@ function! s:get_cursor_highlight(key) abort
 endfunction
 
 function! s:set_cursor_highlight(bg, fg, gui) abort
-  execute 'hi Cursor guibg=' . a:bg . ' guifg=' . a:fg . ' gui=' . a:gui
+  execute printf('hi Cursor guibg=%s guifg=%s gui=%s', a:bg, a:fg, a:gui)
 endfunction
 
 function! s:is_cursor_visible() abort
@@ -70,7 +70,7 @@ function! s:toggle_cursor() abort
   endif
 endfunction
 
-function! s:run_if_has_gui(f) abort
+function! s:call_if_has_gui(f) abort
   if has('gui_running')
     return a:f()
   else
@@ -79,27 +79,27 @@ function! s:run_if_has_gui(f) abort
 endfunction
 
 function! s:warn(msg) abort
-  echohl WarningMsg | echomsg '[kitondro] ' . a:msg | echohl None
+  echohl WarningMsg | echomsg '[kitondro]' a:msg | echohl None
 endfunction
 
 function! kitondro#is_cursor_visible() abort
-  return s:run_if_has_gui(function('s:is_cursor_visible'))
+  return s:call_if_has_gui(function('s:is_cursor_visible'))
 endfunction
 
 function! kitondro#hide_cursor() abort
-  call s:run_if_has_gui(function('s:hide_cursor'))
+  call s:call_if_has_gui(function('s:hide_cursor'))
 endfunction
 
 function! kitondro#show_cursor() abort
-  call s:run_if_has_gui(function('s:show_cursor'))
+  call s:call_if_has_gui(function('s:show_cursor'))
 endfunction
 
 function! kitondro#toggle_cursor() abort
-  call s:run_if_has_gui(function('s:toggle_cursor'))
+  call s:call_if_has_gui(function('s:toggle_cursor'))
 endfunction
 
 if has('autocmd') && exists('##ColorScheme')
-  augroup __kitondro__
+  augroup VimKitondro
     autocmd!
     autocmd ColorScheme * call <sid>save_cursor_highlight()
   augroup END
