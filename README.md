@@ -44,7 +44,7 @@ FAQ
 License
 -------
 
-Copyright (c) 2016-2018 Osman Koçak.
+Copyright (c) 2016-2020 Osman Koçak.
 Distributed under the terms of the [MIT License][4].
 
 
