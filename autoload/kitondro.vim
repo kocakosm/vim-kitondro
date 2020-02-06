@@ -1,3 +1,4 @@
+scriptencoding utf-8
 "----------------------------------------------------------------------"
 " This file is part of vim-kitondro                                    "
 " Copyright (c) 2016-2018 Osman Koçak <kocakosm@gmail.com>             "
@@ -21,7 +22,7 @@ function! s:get_cursor_highlight(key) abort
     return empty(gui) ? 'NONE' : join(gui, ',')
   endif
   let arg = synIDattr(synIDtrans(hlID('Cursor')), a:key)
-  return (arg == -1 || arg == '') ? 'NONE' : arg
+  return (arg ==# -1 || arg ==# '') ? 'NONE' : arg
 endfunction
 
 function! s:set_cursor_highlight(bg, fg, gui) abort

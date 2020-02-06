@@ -1,3 +1,4 @@
+scriptencoding utf-8
 "----------------------------------------------------------------------"
 " This file is part of vim-kitondro                                    "
 " Copyright (c) 2016-2018 Osman Koçak <kocakosm@gmail.com>             "

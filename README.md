@@ -8,15 +8,14 @@ Requirements
 ------------
 
 Kitondro requires a GUI version of Vim. Though it should just work in all GUI
-flavors of Vim, it has only been tested with the GTK+ variants.
+flavors of Vim, it has only been tested with the GTK variants.
 
 
 Installation
 ------------
 
-If you don't already have a preferred installation method, I would recommend
-using [vim-plug][1]. See the project's home page for installation and usage
-instructions.
+If you don't already have a preferred installation method, I'd highly recommend
+[vim-plug][1]. See the project's home page for installation and usage instructions.
 
 
 Usage
@@ -36,7 +35,7 @@ FAQ
 ---
 
 **Q**: Is this plugin really useful?<br/>
-**A**: Ahem...
+**A**: Ahem... Well, no, not really (though I actually happen to use it).
 
 **Q**: Why 'Kitondro'?<br/>
 **A**: It means 'cursor' in [Malagasy][3].
@@ -52,12 +51,10 @@ Distributed under the terms of the [MIT License][4].
 Contact
 -------
 
-If you have any question, feel free to send me an e-mail at kocakosm[@]gmail[dot]com
-or ping me on [twitter][5].
+If you have any question, feel free to send me an e-mail at kocakosm[@]gmail[dot]com.
 
 
  [1]: https://github.com/junegunn/vim-plug
  [2]: https://raw.githubusercontent.com/kocakosm/vim-kitondro/master/doc/kitondro.txt
  [3]: https://en.wikipedia.org/wiki/Malagasy_language
  [4]: https://opensource.org/licenses/MIT
- [5]: https://twitter.com/kocakosm

@@ -36,7 +36,7 @@ in Malagasy (https://en.wikipedia.org/wiki/Malagasy_language).
 
 Kitondro requires a GUI version of Vim (console versions are NOT supported).
 Though it should just work in all GUI flavors of Vim, it has only been tested
-with the GTK+ variants (versions 2 and 3).
+with the GTK variants (versions 2 and 3).
 
 
 ==============================================================================
